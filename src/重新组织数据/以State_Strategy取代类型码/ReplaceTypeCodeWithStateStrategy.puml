@@ -1,0 +1,27 @@
+@startuml
+
+
+
+class Employee {
+    int ENGINEER;
+    int SALESMAN;
+    int type;
+}
+
+
+Employee --> EmployeeType
+
+EmployeeType <|-- Engineer
+
+EmployeeType <|-- Salesman
+
+
+note as N1
+  你有一个类型码，它会影响类的行为，
+  但你无法通过继承手法消除它。
+
+  以状态对象取代类型码。
+end note
+
+
+@enduml
